@@ -9,7 +9,10 @@ class BooksController < ApplicationController
     book = Book.new(book_params)
     book.save
     redirect_to books_path
+  end
 
+  def show
+    @book = Book.find(params[:id])
   end
 
 
